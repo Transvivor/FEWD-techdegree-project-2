@@ -1,10 +1,10 @@
 *{
   box-sizing: border-box;
-  font-family: 'Dhurjati', sans-serif;
+  font-family: 'Indie Flower', cursive;
 }
 body {
   background-color: rgb(245, 245, 245);
-  min-width: 300px;
+  width: 100%;
 }
 h1 {
   font-size: 2em;
@@ -21,13 +21,9 @@ header {
   text-align: center;
   min-width: 100%;
 }
-.divide {
-  display: flex;
-  flex-direction: column;
-}
-.profile-img {
-  max-height: 300px;
-  margin: 50px auto;
+
+.profile-img{
+  width: 100%;
 }
 ul{
   display: block;
@@ -48,10 +44,9 @@ header li {
   color: black;
 }
 header p{
-  max-width: 80%;
-  margin: 50px;
+  margin: auto;
 }
-img {
+.card img {
   width: 100%;
   height: auto;
   padding: 0;
@@ -70,17 +65,27 @@ main{
   grid-template-rows: auto;
   margin: 0 auto;
 }
-main p,
-main h2 {
-  margin: 0;
-  padding: 0;
-}
 
 .card {
   padding: 0;
   margin: 20px auto;
 }
-
+footer,
+#contact {
+  max-width: 90%;
+  margin:auto;
+  text-align: center;
+}
+footer{
+  display: flex;
+  flex-direction: row;
+}
+footer h2 {
+  font-size: 1em;
+}
+#bottom{
+  margin-left: auto;
+}
 /*
 ================================
 Media Queries
@@ -88,28 +93,55 @@ Media Queries
  */
 
  @media (min-width: 768px) {
-  .deck{
-    grid-template-columns: 50% 50%;
-    grid-gap: 10px;
-  }
-  .divide {
-    display: flex;
-    flex-direction: row-reverse;
+     p{
+       font-size: 1.2em;
+     }
+    .deck{
+      grid-template-columns: 50% 50%;
+      grid-gap: 10px;
+    }
+
+    .divide {
+      max-width: 80%;
+      margin: auto;
+      display: grid;
+      grid-auto-flow:dense;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+    .wrapper{
+      margin:10px;
+      text-align: left;
+    }
+
+    .primary{
+      grid-column-start: 2;
+    }
+    header li {
+      display: inline-block;
+      background-color: initial;
+    }
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-}
-header ul {
-  margin-left: auto;
-}
-header li {
-  display: inline-block;
-}
-
- }
- @media (min-width: 1024px) {
+@media (min-width: 1024px) {
    .deck{
-     grid-template-columns: 1fr 1fr 1fr;
- }
+       grid-template-columns: 1fr 1fr 1fr;
+   }
+   nav {
+     display: flex;
+     flex-direction: row;
+     margin: 0 50px;
+   }
+  main{
+    margin: 0 auto;
+    max-width: 70%;
+  }
+  .divide{
+    max-width: 70%;
+    margin: 50px auto;
+  }
+   header ul {
+     margin-left: auto;
+   }
+}
