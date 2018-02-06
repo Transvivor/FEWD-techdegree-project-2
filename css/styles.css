@@ -103,6 +103,9 @@ ul {
   padding: 10px;
   background-color: lightblue;
 }
+.b-nav{
+  display: none;
+}
 /*
 ================================
 Media Queries
@@ -113,11 +116,21 @@ Media Queries
      p{
        font-size: 1.2em;
      }
+     .b-nav{
+       margin-left: auto;
+       display: inline-block;
+     }
+     .b-nav li{
+      padding: 20px;
+       display: inline-block;
+     }
     .deck{
       grid-template-columns: 50% 50%;
       grid-gap: 10px;
     }
-
+#bottom {
+  display: none;
+}
 
     .divide {
       max-width: 80%;
